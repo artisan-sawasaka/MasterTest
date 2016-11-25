@@ -124,6 +124,7 @@ public :
 }};
 }}
 ", className, string.Join("\r\n    ", variables), string.Join("\r\n        ", readers));
+                if (!File.Exists(path)) Directory.CreateDirectory(path);
                 File.WriteAllText(string.Format("{0}/{1}.h", path, fileName), s, Encoding.GetEncoding(932));
             }
 
@@ -133,6 +134,7 @@ public :
             /// <param name="path"></param>
             public void OutputBinary(string path)
             {
+                if (!File.Exists(path)) Directory.CreateDirectory(path);
                 FileStream stream = new FileStream(string.Format("{0}/{1}.dat", path, fileName), FileMode.Create, FileAccess.Write);
                 for (int y = 0; y < values[0].values.Count; ++y) {
                     for (int x = 0; x < values.Count; ++x) {
