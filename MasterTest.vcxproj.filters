@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{710d8128-019c-40d6-8e6f-5ffd0ddc9fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\main">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="source\master">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\utility">
+      <UniqueIdentifier>{a43b4544-34b9-4434-a9a6-19e6f7dcbe7f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\utility\FileUtility.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\stdafx.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\utility\StreamReader.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="source\master\Mario.h">
+      <Filter>source\master</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main\main.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
