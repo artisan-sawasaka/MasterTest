@@ -1,13 +1,19 @@
 #include "stdafx.h"
-#include "utility/FileUtility.hpp"
-#include "utility/StreamReader.hpp"
 #include "master/MasterData.hpp"
 
 void TitleImageListPrint()
 {
+	std::set<std::string> images;
 	for (auto it = MasterData::TitleImageList.begin(); it != MasterData::TitleImageList.end(); ++it) {
 		auto& info = it->second;
 		printf("Name:%-10s Path:%-10s X:%3d Y:%3d W:%3d H%3d\n", info.name.c_str(), info.path.c_str(), info.x, info.y, info.w, info.h);
+		images.insert(info.path);
+	}
+	printf("\n");
+
+	printf("再読み込み画像ファイル\n");
+	for (auto it = images.begin(); it != images.end(); ++it) {
+		printf("%s\n", it->c_str());
 	}
 }
 
@@ -35,10 +41,15 @@ int main()
 
 	int c = 0;
 	while (true) {
-		printf("1:TitleImageList 2:TitleUI 3:Player\n");
+		printf("1:TitleImageList 2:TitleUI 3:Player c:クリア\n");
 		c = getchar();
 		getchar();
 		if (c == EOF) break;
+		if (c == 'c') {
+			system("cls");
+			continue ;
+		}
+
 		c -= '0' + 1;
 		if (0 <= c && c <= 2) {
 			MasterData::Reload("data/master");

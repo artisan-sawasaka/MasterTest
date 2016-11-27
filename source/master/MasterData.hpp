@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "utility/FileUtility.hpp"
+#include "utility/StreamReader.hpp"
 #include "master/Player.hpp"
 #include "master/TitleImageList.hpp"
 #include "master/TitleUI.hpp"
