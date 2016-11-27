@@ -26,7 +26,7 @@
     <ClInclude Include="source\utility\StreamReader.hpp">
       <Filter>source\utility</Filter>
     </ClInclude>
-    <ClInclude Include="source\master\Mario.h">
+    <ClInclude Include="source\master\MasterData.hpp">
       <Filter>source\master</Filter>
     </ClInclude>
   </ItemGroup>

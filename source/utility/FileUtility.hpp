@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
 
 class File
 {
@@ -48,7 +49,6 @@ public:
 		return ret;
 	}
 
-	// 
 	/*!
 	 * @brief テキストファイルを行で分解して読み込む
 	 *

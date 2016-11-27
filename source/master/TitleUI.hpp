@@ -5,20 +5,18 @@
 
 namespace MasterData
 {
-class MarioData
+class TitleUIData
 {
 public :
     int id;
-    std::string name;
-    std::string path;
+    std::string image;
     int x;
     int y;
 
     void Load(StreamReader& reader)
     {
         id = reader.ReadInt();
-        name = reader.ReadString();
-        path = reader.ReadString();
+        image = reader.ReadString();
         x = reader.ReadInt();
         y = reader.ReadInt();
     }
