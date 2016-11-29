@@ -20,6 +20,7 @@ namespace MasterData
     {
         std::vector<char> buffer;
 	    StreamReader reader;
+        int length;
 
         buffer = File::ReadAllBytes(path + "/Player.dat");
         reader = StreamReader(buffer);
@@ -27,7 +28,7 @@ namespace MasterData
 
         buffer = File::ReadAllBytes(path + "/TitleImageList.dat");
         reader = StreamReader(buffer);
-        int length = reader.ReadInt();
+        length = reader.ReadInt();
         for (int i = 0; i < length; ++i) {
             auto key = reader.ReadStringNoSeek();
             TitleImageList[key].Load(reader);

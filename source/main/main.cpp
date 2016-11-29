@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "master/MasterData.hpp"
+#include <Windows.h>
 
 void TitleImageListPrint()
 {
@@ -43,7 +44,11 @@ int main()
 	while (true) {
 		printf("1:TitleImageList 2:TitleUI 3:Player c:ƒNƒŠƒA\n");
 		c = getchar();
-		getchar();
+
+		// ‰üs‚Ü‚Å”ò‚Î‚·
+		while (getchar() != 0x0a)
+			;
+
 		if (c == EOF) break;
 		if (c == 'c') {
 			system("cls");
