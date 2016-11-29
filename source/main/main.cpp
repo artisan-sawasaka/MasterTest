@@ -1,11 +1,14 @@
 #include "stdafx.h"
 #include "master/MasterData.hpp"
 
+/*!
+ * @brief タイトル画像リストの表示
+ */
 void TitleImageListPrint()
 {
 	std::set<std::string> images;
 	for (auto it = MasterData::TitleImageList.begin(); it != MasterData::TitleImageList.end(); ++it) {
-		auto& info = it->second;
+		const auto& info = it->second;
 		printf("Name:%-10s Path:%-10s X:%3d Y:%3d W:%3d H%3d\n", info.name.c_str(), info.path.c_str(), info.x, info.y, info.w, info.h);
 		images.insert(info.path);
 	}
@@ -17,19 +20,26 @@ void TitleImageListPrint()
 	}
 }
 
+/*!
+ * @brief タイトルUIの表示
+ */
 void TitleUIPrint()
 {
 	for (size_t i = 0; i < MasterData::TitleUI.size(); ++i) {
-		auto& info = MasterData::TitleUI[i];
+		const auto& info = MasterData::TitleUI[i];
 		printf("ID:%2d Image:%-10s X:%3d Y:%3d\n", info.id, info.image.c_str(), info.x, info.y);
 	}
 }
 
+/*!
+ * @brief プレイヤーの定数の表示
+ */
 void PlayerPrint()
 {
-	auto player = MasterData::Player;
+	const auto& player = MasterData::Player;
 	printf("Speed:%2f Credit:%d X:%3d Y:%3d\n", player.speed, player.credit, player.xpos, player.ypos);
 }
+
 
 int main()
 {
