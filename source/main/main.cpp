@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "master/MasterData.hpp"
-#include <Windows.h>
 
 void TitleImageListPrint()
 {
