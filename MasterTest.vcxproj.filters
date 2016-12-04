@@ -33,5 +33,8 @@
     <ClCompile Include="source\main\main.cpp">
       <Filter>source\main</Filter>
     </ClCompile>
+    <ClCompile Include="source\master\MasterData.cpp">
+      <Filter>source\master</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
